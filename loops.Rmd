@@ -1,0 +1,29 @@
+---
+title: "Loops"
+author: "Victor Mandela"
+date: "January 15, 2020"
+output: html_document
+---
+
+```{r}
+#for, If and else
+#program for a reward system to students performance
+reward <- data.frame()
+repeat{
+  total <- 0
+  student <- as.character(readline("Enter the student name: "))
+  unit_no <- as.integer(readline("Enter the number of units: "))
+  
+  for (i in 1:unit_no){
+    units <- as.integer(readline("Enter the unit marks "))
+    total <- total + units
+    score <- total/unit_no
+  }
+  if (score < 40){
+    gift <- "Work Harder"
+  }else{
+    gift <- "Money"
+  }
+}
+```
+
